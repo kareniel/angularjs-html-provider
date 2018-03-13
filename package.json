@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-html-provider",
+  "version": "1.0.0",
+  "description": "Compile html inside your components using template litterals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "standard": {
+    "globals": ["angular"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kareniel/angularjs-html-provider.git"
+  },
+  "keywords": [
+    "angularjs",
+    "html"
+  ],
+  "author": "kareniel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kareniel/angularjs-html-provider/issues"
+  },
+  "homepage": "https://github.com/kareniel/angularjs-html-provider#readme"
+}
