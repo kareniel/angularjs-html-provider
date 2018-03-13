@@ -1,6 +1,6 @@
 {
   "name": "angularjs-html-provider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compile html inside your components using template litterals.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/kareniel/angularjs-html-provider.git"
   },
   "peerDependencies": {
-    "angular": "1.6.x",
+    "angular": "1.6.x"
   },
   "keywords": [
     "angularjs",
