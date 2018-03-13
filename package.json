@@ -13,6 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/kareniel/angularjs-html-provider.git"
   },
+  "peerDependencies": {
+    "angular": "1.6.x",
+  },
   "keywords": [
     "angularjs",
     "html"
