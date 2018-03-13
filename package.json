@@ -1,6 +1,6 @@
 {
   "name": "angularjs-html-provider",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Compile html inside your components using template litterals.",
   "main": "index.js",
   "scripts": {
