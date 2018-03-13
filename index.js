@@ -5,27 +5,40 @@ module.exports = angular
   .provider('$html', htmlProvider)
 
 function htmlProvider () {
+  var injector
+
   return {
     $get: function () {
-      return bindToScope
+      return function bindToScope (scope) {
+        if (!injector) injector = angular.element(document).injector()
+
+        return html.bind(scope)
+      }
     }
   }
 
-  function bindToScope (scope) {
-    return html.bind(scope)
-  }
-
-  function html (templateStringsArray) {
+  function html (template) {
     var scope = this
-    var template = templateStringsArray.reduce((a, b) => a.concat(b), '')
-    var injector = angular.element(document).injector()
+    var values = Array.prototype.slice.call(arguments, 1)
 
-    return injector.invoke(['$compile', render])
+    template = renderTemplateString(template, values)
 
-    function render ($compile) {
+    return injector.invoke(['$compile', compile])
+
+    function compile ($compile) {
       var el = $compile(template)(scope)
 
       return el
     }
   }
+}
+
+function renderTemplateString (strings, values) {
+  var value
+
+  return strings.reduce((accumulator, part, i) => {
+    value = values[i - 1]
+    if (typeof value === 'undefined') value = ''
+    return accumulator + value + part
+  })
 }
