@@ -15,9 +15,14 @@ such as tables with interactive widgets.
 Inject `$scope` and the `$html` provider in a component.
 Calling `$http` with `$scope` as it's only argument will return a tag function. 
  
-`var html = $html($scope)`  
  
-`html\`<div></div>\``  
+``` js
+var html = $html($scope)
+
+function view () {
+  return html`<div></div>`
+}
+```
 
 
 ## Example
